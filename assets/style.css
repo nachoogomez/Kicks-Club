@@ -1,0 +1,932 @@
+:root{
+    /* bg colors */
+    --background: #fffffe;
+    --background-nav: #252525;
+    --primary: #BC0B39;
+    --secondary: #FFA400;
+    --bg-electric: #f0fbff;
+  
+    /* Text colors */
+    --text-grey: #7A7A7A;
+    --text-white: #f3f4f6;
+    --text-black: #273036;
+
+  }
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'lato';
+}
+
+/* Header */
+
+header{
+    background-color: var(--background-nav);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    padding: 0px 30px 0px 30px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+.header-title{
+    height: 80%;
+    color: #f3f4f6;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.navbar, .navbar-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    gap: 40px;
+}
+
+.navbar-list{
+    gap: 40px;
+}
+
+.navbar-list a{
+    color: #f3f4f6;
+    font-size: 17px;
+}
+
+.navbar-list li:first-child{
+    font-weight: 600;
+}
+
+#menu-toggle, .menu-label{
+    display: none;
+}
+
+/* User */
+
+.fa-user{
+    color: #f0fbff;
+    cursor: pointer;
+}
+
+.user-btn {
+    position: absolute;
+    top: 65px; 
+    right: 0;
+    padding: 50px 30px;
+    background: var(--background-nav);
+    border-left: 2px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 2;
+    display: none;
+  }
+  
+  .user::-webkit-scrollbar {
+    display: none;
+  }
+
+/*Ocultar/mostrar user*/
+#user-toggle,
+  #user-toggle,
+  .user-btn {
+    display: none;
+  }
+  
+  #user-toggle:checked + .user-btn {
+    display: flex;
+  }
+
+/* Login and register */
+
+.user-btn{
+    padding: 60px;
+}
+
+.login-btn{
+    color: var(--text-white);
+    font-weight: 800;
+    background-color: var(--primary);
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.register-btn{
+    color: var(--text-white);
+    border: 3px solid var(--primary);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+
+/* Main */
+
+main {
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-black);
+    width: 100%;
+}
+
+/* Hero */
+
+#hero{
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero-main{
+    max-width: 1200px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 30px;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+.hero-info h1{
+    font-size: 55px;
+    font-weight: 800;
+    
+}
+
+.hero-info p{
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+
+.hero-info a{
+    color: var(--text-white);
+    font-weight: 800;
+    background: var(--primary);
+    width: 120px;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.hero-main img{
+    width: 400px;
+    
+}
+
+/* Brands */
+
+.brands{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+.brand-box{
+    border: 5px solid #0000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    width: 20%;
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+.brand-box img{
+    width: 30%; 
+ }
+
+
+/* About us */
+
+#about-us{
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.about-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 30px;
+    max-width: 1200px;
+    gap: 20px;
+
+}
+
+.about-info{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 45px;
+    background: #fffffe;
+    box-shadow:  -20px -20px 40px #babab9,
+                 20px 20px 40px #ffffff;
+    padding: 90px 80px;
+
+}
+
+.about-container img{
+    width: 30%;
+}
+
+
+/* Recomend */
+
+#recomend{
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.recomend-container{
+    padding: 70px 30px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.recomend-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #fffffe;
+    box-shadow:  20px 20px 60px #babab9,
+                 20px 20px 60px #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    gap: 70px;
+    max-width: 1200px;
+}
+
+.recomend-box h2{
+    font-size: 40px;
+    color: transparent;
+    font-weight: 900;
+    background: linear-gradient(to bottom, #f12711, #f5af19);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.recomend-info{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+
+.recomend-card h3{
+    font-size: 16px;
+}
+
+.divider{
+    border-left: 1px solid black;
+    height: 80px;
+    gap: 10px;
+}
+
+/* Recomend tweet */
+
+.recomend-tweets{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.bio{
+    background-color: #252525;
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 30px;
+    max-width: 350px;
+}
+
+.bio img{
+    width: 300px;
+    border-radius: 15px;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data {
+    margin-top: .6em; 
+}
+
+.data li {
+      width: 32%;
+      text-align: center;
+      display: inline-block;
+      font-size: 1.5em;
+      font-family: 'Lato';
+      border-right: solid 1px #bdc3c7; 
+      gap: 10px;    
+    }
+
+.data li:last-child {
+    border: none; }
+
+.data li span {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+    font-size: .5em;
+    margin-top: .6em;
+    font-weight:700;
+}
+
+.tweet p{
+    font-size: 14px;
+}
+
+.container-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.container-info span{
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--primary);
+    font-family: 'Lato';
+}
+
+.container-info p{
+    font-size: 18px;
+    font-family: 'Lato';
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.icons a{
+    color: #252525;
+    font-size: 30px;
+}
+
+/* Product */
+
+#last-products{
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container-products{
+    max-width: 1200px;
+    padding: 70px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-box{
+    max-width: 350px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-box img{
+    width: 80%;
+    height: 90%;
+}
+
+.product-box:nth-child(1){
+    background: url(./img/productos/airjordan_bg.jpeg) center center / cover no-repeat;
+    background-blend-mode: soft-light;
+    background-color: rgb(39, 39, 39);
+}
+
+.product-box:nth-child(2){
+    width: 300;
+    padding: 20px;
+    background: url(./img/productos/nike-dunk-low-argon-3.jpeg) center center / cover no-repeat;
+    background-blend-mode: soft-light;
+    background-color: rgb(39, 39, 39);
+}
+
+.product-box:nth-child(3){
+    width: 300;
+    padding: 20px;
+    background: url(./img/productos/Jackie\ Robinson\ Sneaker\ 1.jpeg) center center / cover no-repeat;
+    background-blend-mode: soft-light;
+    background-color: rgb(39, 39, 39);
+}
+
+
+.shoes-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shoes-info h3{
+    color: #fff;
+    text-align: center;
+}
+
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+   }
+   
+   button.learn-more {
+    width: 12rem;
+    height: auto;
+   }
+   
+   button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+   }
+   
+   button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+   }
+   
+   button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+   }
+   
+   button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+   }
+   
+   button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+   }
+   
+   button:hover .circle {
+    width: 100%;
+   }
+   
+   button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+   }
+   
+   button:hover .button-text {
+    color: #fff;
+   }
+
+
+/* Gallery */
+
+#gallery{
+    margin-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#gallery h2{
+    font-size: 38px;
+    text-decoration: underline;
+}
+
+.container-gallery {
+    max-width: 950px;
+    padding: 2rem;
+    margin: 65px 0;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 350px 300px 250px;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    height: 90vh;
+}
+
+.item-gallery{
+    border-radius: 1rem;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.item-gallery:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background: url(./img/gallery/doncic.jpg) no-repeat center/cover;
+}
+
+.item-gallery:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background: url(./img/gallery/custom.jpg) no-repeat center/cover;
+}
+
+.item-gallery:nth-child(3){
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background: url(./img/gallery/custom2.jpg) no-repeat center/cover;
+}
+
+.item-gallery:nth-child(4){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background: url(./img/gallery/puppy.jpg) no-repeat center/cover;
+}
+
+
+.item-gallery:nth-child(5){
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background: url(./img/gallery/scooby.jpg) no-repeat center/cover;
+}
+
+
+/* Contact */
+
+#contact{
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    padding: 70px 30px;
+    gap: 30px;
+}
+
+.contact-box{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-items: center;
+}
+
+.contact-box h2{
+    font-size: 38px;
+    font-family: 'Lato';
+    font-weight: 800;
+    text-align: center;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input-box input{
+    width: 350px;
+    height: 40px;
+    border: 2px solid #252525;
+}
+
+.input-box a{
+    background-color: var(--primary);
+    font-weight: 800;
+    background: var(--primary);
+    width: 120px;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: #fff;
+
+}
+
+a:hover > i {
+    font-size: 1.2em;
+    transform: translateX(10px);
+   }
+
+.ubication{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+.ubication i{
+    color: #252525;
+    letter-spacing: 2px;
+
+  }
+
+.ubication:last-child{
+    cursor: pointer;
+  }
+
+/* Footer */
+
+
+footer{
+    background-color: #252525;
+    color: var(--text-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+   
+}
+
+
+.links ul{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px
+}
+
+footer a{
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 24px;
+}
+
+footer p{
+    color: var(--text-white);
+    margin-bottom: 20px;
+}
+
+
+footer span {
+    font-weight: 600;
+    color: var(--text-white);
+  }
+
+
+
+/* Login Page */
+
+#login{
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+    flex-direction: column;
+    max-width: 1400px;
+    padding: 50px;
+}
+  
+.login-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-info h2{
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.login-info h3{
+    font-size: 12px;
+    color: var(--text-grey);
+}
+
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-input{
+    width: 100%;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 1px solid #252525;
+    background: var(--background);
+    padding: 10px 0px;
+    outline: none;
+    width: 350px;
+    transition: 0.2s;
+}
+
+.input::placeholder{
+    font-size: 10px;
+}
+
+.login-form a{
+    font-size: 12px;
+}
+
+button{
+    float: right;
+    margin: 20px;
+    border: 0;
+    background: var(--primary);
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+#footer-fixed{
+    position: fixed;
+    bottom: 0;
+    background-color: var(--background-nav);
+    width: 100%;
+}
+
+#footer-fixed p{
+    text-align: center;
+}
+
+/* Register */
+
+#register-form{
+    margin-top: 75px;
+    padding: 50px 0;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+#register-form h2{
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.register-list i{
+   color: #252525;
+}
+
+.register-input{
+    border: none;
+    border-bottom: 1px solid #252525;
+    padding: 10px 5px;
+    width: 350px;
+    background: transparent;
+    outline: 0;
+    transition: border-color 0.2s;
+}
+
+.register-terms{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.register-terms span{
+    font-weight: 900;
+    font-size: 16px;
+}
+
+button{
+    float: right;
+    margin: 20px;
+    border: 0;
+    background: var(--primary);
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 800;
+  }
+
+
+  
+
+
+
+
+
+ 

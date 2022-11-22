@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kicks Club</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/mediaquerys.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="index.html#hero" class="header-title">Kicks Club</a>
+        <nav class="navbar">
+            <label for="menu-toggle" class="menu-label">
+                <img src="./assets/img/menu.png" class="menu-icon">
+            </label>
+            <input type="checkbox" id="menu-toggle">
+            <ul class="navbar-list">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about-us">About Us</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>               
+            </ul>
+            <label for="user-toggle" class="user-label">
+                <i class="fa-solid fa-user"></i></label>
+            <input type="checkbox" id="user-toggle">
+        
+        <!-- User --> 
+            <div class="user-btn">
+                <a href="./login.html" class="login-btn">Login</a>
+                <a href="./register.html" class="register-btn">Register</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="register-form">
+            <h2>Register</h2>
+            <div class="register-list">
+                <label for="first-name"><i class="fa-solid fa-user"></i></label>
+                <input type="text" id="first-name" class="register-input" placeholder="Full Name" required>
+            </div>
+            <div class="register-info">
+                <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                <input type="email" id="email" class="register-input" placeholder="Email" required>
+            </div>
+            <div class="register-info">
+                <label for="password"><i class="fa-sharp fa-solid fa-key"></i></label>
+                <input type="password" id="password" class="register-input" placeholder="Password" required>
+            </div>
+            <div class="register-info">
+                <label for="phone"><i class="fa-solid fa-phone"></i></label>
+                <input type="text" id="phone" class="register-input" placeholder="Phone (+11 999 999)" required>
+            </div>      
+            <div class="register-terms">
+                <input type="checkbox" id="checkbox" class="checkbox-input">
+                <label for="checkbox">I agree to the <span>Terms and conditions</span> and the privacy policy prestashop </label>
+            </div> 
+            <button>Register</button>    
+        </section>
+    </main>
+    <footer>
+        <section id="footer-fixed">
+            <div class="links">
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <p>Hecho por <span>Ignacio Gomez</span></p>
+        </section>
+    </footer>
+</body>
+</html>
+
