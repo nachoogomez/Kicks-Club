@@ -37,21 +37,21 @@
     <main>
         <section id="register-form">
             <h2>Register</h2>
-            <div class="register-list">
-                <label for="first-name"><i class="fa-solid fa-user"></i></label>
-                <input type="text" id="first-name" class="register-input" placeholder="Full Name" required>
+            <div class="register-info">
+                <input required="" placeholder="Full Name" class="form__field" type="input">
+                <label class="form__label" for="name">Full Name</label>
             </div>
             <div class="register-info">
-                <label for="email"><i class="fa-solid fa-envelope"></i></label>
-                <input type="email" id="email" class="register-input" placeholder="Email" required>
+                <input type="email" id="email" class="form__field" placeholder="Email" required>
+                <label for="email" class="form__label">Email</label>                
             </div>
             <div class="register-info">
-                <label for="password"><i class="fa-sharp fa-solid fa-key"></i></label>
-                <input type="password" id="password" class="register-input" placeholder="Password" required>
+                <input type="password" id="password" class="form__field" placeholder="Password" required>
+                <label for="password" class="form__label">Password</label>
             </div>
             <div class="register-info">
-                <label for="phone"><i class="fa-solid fa-phone"></i></label>
-                <input type="text" id="phone" class="register-input" placeholder="Phone (+11 999 999)" required>
+                <input type="text" id="phone" class="form__field" placeholder="Phone (+11 999 999)" required>
+                <label for="phone" class="form__label">Phone</label>
             </div>      
             <div class="register-terms">
                 <input type="checkbox" id="checkbox" class="checkbox-input">
@@ -73,4 +73,6 @@
     </footer>
 </body>
 </html>
+
+
 

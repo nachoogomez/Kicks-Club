@@ -22,6 +22,40 @@
     font-family: 'lato';
 }
 
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100px);
+    } to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(100px);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-left {
+    from {
+        transform: translateX(-100px);  /*no funciona */
+    }
+    to {
+        transform: translateX(0);
+    }
+  }
+
 /* Header */
 
 header{
@@ -124,6 +158,10 @@ header{
     cursor: pointer;
 }
 
+.login-btn:hover{
+    background-color:#f12711;
+}
+
 .register-btn{
     color: var(--text-white);
     border: 3px solid var(--primary);
@@ -133,6 +171,11 @@ header{
     text-align: center;
     cursor: pointer;
     font-weight: 800;
+}
+
+.register-btn:hover{
+    background-color: #f12711;
+    border-color: #f12711;
 }
 
 
@@ -177,22 +220,22 @@ main {
 
 .hero-info h1{
     font-size: 55px;
-    font-weight: 800;
-    
+    font-weight: 800;  
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
 }
 
 .hero-info p{
     font-size: 18px;
     font-weight: 500;
-    
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
 }
 
 
-.hero-info a{
+.bepart-btn{
     color: var(--text-white);
     font-weight: 800;
     background: var(--primary);
-    width: 120px;
+    width: 130px;
     padding: 13px;
     border-radius: 10px;
     border: none;
@@ -200,10 +243,19 @@ main {
     text-align: center;
     cursor: pointer;
     overflow: hidden;
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
+}
+
+.bepart-btn:hover{
+    background-color: #252525;
+    box-shadow:  8px 8px 16px #aaaaaa,
+             -8px -8px 16px #ffffff;
 }
 
 .hero-main img{
     width: 400px;
+    animation: fade 1s ease-in forwards, slide-right 1.3s ease-in-out;
+    animation-delay: 0.2s;
     
 }
 
@@ -225,6 +277,8 @@ main {
     align-items: center;
     justify-content: center;
     display: flex;
+    animation: fade 1s ease-in forwards, slide-right 1.3s ease-in-out;
+    animation-delay: 0.2s;
 }
 
 
@@ -265,11 +319,13 @@ main {
     box-shadow:  -20px -20px 40px #babab9,
                  20px 20px 40px #ffffff;
     padding: 90px 80px;
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
 
 }
 
 .about-container img{
     width: 30%;
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out;
 }
 
 
@@ -719,10 +775,22 @@ button {
 
 }
 
+.input.contact::placeholder{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.subscribe-btn:hover{
+    background-color: #252525;
+    box-shadow:  8px 8px 16px #aaaaaa,
+             -8px -8px 16px #ffffff;
+}
+
 
 a:hover > i {
     transform: translateX(10px);
     transition: all 0.5s ease;
+    
    }
 
 .ubication{
@@ -795,8 +863,10 @@ footer span {
     justify-content: center;
     width: 100%;  
     flex-direction: column;
-    max-width: 1400px;
-    padding: 50px;
+    max-width: 1200px;
+    padding: 70px 30px;
+    gap: 40px;
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out; 
 }
   
 .login-info{
@@ -804,6 +874,7 @@ footer span {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 .login-info h2{
@@ -825,16 +896,13 @@ footer span {
 }
 
 .login-input{
+    position: relative;
+    padding: 20px 0 0;
+    margin-top: 10px;
     width: 100%;
-    margin: 20px 0;
-    border: none;
-    border-bottom: 1px solid #252525;
-    background: var(--background);
-    padding: 10px 0px;
-    outline: none;
-    width: 350px;
-    transition: 0.2s;
-}
+    max-width: 350px;
+  }
+
 
 .input::placeholder{
     font-size: 10px;
@@ -857,6 +925,12 @@ footer span {
     font-weight: 600;
 }
 
+.button-form:hover{
+    background-color:#f12711;
+    box-shadow:  8px 8px 16px #aaaaaa,
+             -8px -8px 16px #ffffff;
+}
+
 #footer-fixed{
     position: fixed;
     bottom: 0;
@@ -871,44 +945,21 @@ footer span {
 /* Register */
 
 #register-form{
-    margin-top: 75px;
-    padding: 50px 0;
+    margin-top: 65px;
+    padding: 70px 30px;
     max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
-    width: 100%;
+    gap: 40px;
+    width: 100%;   
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out; 
 }
 
 #register-form h2{
     font-size: 32px;
     font-weight: 800;
-}
-
-.register-list i{
-   color: #252525;
-}
-
-.register-input{
-    border: none;
-    border-bottom: 1px solid #252525;
-    padding: 10px 5px;
-    width: 350px;
-    background: transparent;
-    outline: 0;
-    transition: border-color 0.2s;
-}
-
-.register-terms{
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.register-terms span{
-    font-weight: 900;
-    font-size: 16px;
 }
 
 .register-form-btn{
@@ -924,11 +975,86 @@ footer span {
     font-weight: 800;
   }
 
+  .register-form-btn:hover{
+    background-color:#f12711;
+    box-shadow:  8px 8px 16px #aaaaaa,
+                -8px -8px 16px #ffffff;
+}
 
+.register-info {
+    position: relative;
+    padding: 20px 0 0;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 350px;
+  }
+
+/* Inputs style */
   
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #252525;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #BC0B39, #f12711);
+    border-image-slice: 1;
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #252525;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+  .register-terms{
+    font-size: 14px;
+    font-weight: 400;
+}
 
-
-
+.register-terms span{
+    font-weight: 900;
+    font-size: 16px;
+}
 
 
  
