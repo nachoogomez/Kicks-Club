@@ -859,14 +859,26 @@ footer span {
 #login{
     margin-top: 65px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;;
+    animation: fade 1s ease-in, slide-up 1.3s ease-in-out; 
+}
+
+.login-form{
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;  
     flex-direction: column;
     max-width: 1200px;
     padding: 70px 30px;
-    gap: 40px;
-    animation: fade 1s ease-in, slide-up 1.3s ease-in-out; 
+    width: 100%;
+    gap: 30px;
+    
+}
+
+.login-form a{
+    color: #252525;
 }
   
 .login-info{
@@ -887,13 +899,6 @@ footer span {
     color: var(--text-grey);
 }
 
-.login-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
 
 .login-input{
     position: relative;
@@ -952,9 +957,14 @@ footer span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
     width: 100%;   
     animation: fade 1s ease-in, slide-up 1.3s ease-in-out; 
+}
+
+.register-box{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 #register-form h2{
