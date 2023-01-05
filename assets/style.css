@@ -267,6 +267,7 @@ main {
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
+    flex-wrap: wrap;
 }
 
 .brand-box{
@@ -279,6 +280,7 @@ main {
     display: flex;
     animation: fade 1s ease-in forwards, slide-right 1.3s ease-in-out;
     animation-delay: 0.2s;
+    margin: 0 20px;
 }
 
 
@@ -753,7 +755,7 @@ button {
 }
 
 .input-box input{
-    width: 350px;
+    max-width: 350px;
     height: 40px;
     border: 2px solid #252525;
 }
@@ -863,6 +865,7 @@ footer span {
     align-items: center;
     width: 100%;;
     animation: fade 1s ease-in, slide-up 1.3s ease-in-out; 
+    padding: 70px 30px;
 }
 
 .login-form{
@@ -871,7 +874,7 @@ footer span {
     justify-content: center;
     flex-direction: column;
     max-width: 1200px;
-    padding: 70px 30px;
+    
     width: 100%;
     gap: 30px;
     

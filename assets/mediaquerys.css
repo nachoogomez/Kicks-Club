@@ -137,17 +137,50 @@
 }
 
 @media (max-width: 576px){
-    .recomend-box{
+
+   .recomend-box{
+      flex-direction: column;
+      display: flex;
+      gap: 20px;
+      box-shadow: none;
+    }
+
+      .recomend-info{
         flex-direction: column;
         gap: 20px;
       }
+
+    .divider{
+      display: none;
+    }
+
+    .bio{
+      font-size: 14px;
+      width: 250px;
+    }
+
+    .bio img{
+      width: 200px;
+    }
+
+    .container-info span{
+      font-size: 28px;
+    }
+
+    .container-info p{
+      font-size: 16px;
+    }
+
+    .product-box{
+      width: 250px;
+    }
 
     #gallery h2{
         font-size: 28px;
     }
 
     .container-gallery{
-        grid-template-columns: 350px;
+        grid-template-columns: 250px;
       }
       
       .item-gallery:nth-child(2){
