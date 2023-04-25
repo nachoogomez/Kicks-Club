@@ -21,7 +21,11 @@
     list-style-type: none;
     font-family: 'lato';
 }
-
+ 
+ html{
+    scroll-behavior: smooth;
+}
+ 
 @keyframes fade {
     from {
         opacity: 0;
@@ -189,7 +193,6 @@ main {
     justify-content: center;
     color: var(--text-black);
     width: 100%;
-    scroll-behavior: smooth;
 }
 
 /* Hero */
